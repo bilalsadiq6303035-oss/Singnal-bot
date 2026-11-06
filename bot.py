@@ -5,7 +5,7 @@ import json
 import ssl
 from datetime import datetime, timedelta
 
-TOKEN = "9002186080:AAHH2SdUsalbJNdHO9GHa384LOohm7I_HUI"
+TOKEN = os.environ.get("TELEGRAM_TOKEN")
 CHAT_ID = "7327733803"
 
 ssl_context = ssl._create_unverified_context()
@@ -52,3 +52,4 @@ def send_signal():
 
 if __name__ == "__main__":
     send_signal()
+
